@@ -43,15 +43,9 @@ heart.end_fill()
 
 # Now that the heart is fully drawn, switch to manual updates for stars
 screen.tracer(0)
-screen.update()   # make sure the filled heart actually appears
+screen.update()   
 
-
-
-# ——————————————
-# Falling Gold Stars Logic
-# ——————————————
-
-# 1) Star‐drawing helper (same as your draw_star, but gold)
+# 1) Star‐drawing helper
 sparkle = turtle.Turtle()
 sparkle.hideturtle()
 sparkle.speed(0)
@@ -98,7 +92,6 @@ def animate():
     # call again in 50 ms
     screen.ontimer(animate, 50)
 
-# Start falling only after the “Love You!” appears
 screen.ontimer(animate, 2000)
 
 turtle.done()
